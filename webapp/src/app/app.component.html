@@ -1,0 +1,44 @@
+<section class="main">
+  <div class="title" style="text-align:center">
+    <h1> home watch {{title}} </h1>
+  </div>
+
+  <div class="content">
+    <div class="menu">
+      <h2 class="menuTitle"> measurment </h2>
+      <div *ngIf="isData == true" class="indicator success"></div>
+      <div *ngIf="isData == false" class="indicator error"></div>
+    </div>
+
+    <ul class="list">
+      <li class="item">
+        <p>
+          <span class="type">Humidity </span>
+          <span class="measure"
+                [ngClass]="{'measure-stoped' : isData == false}">
+            {{humi}} %
+          </span>
+        </p>
+      </li>
+      <li class="item">
+        <p>
+          <span class="type">Celsius </span>
+          <span class="measure"
+                [ngClass]="{'measure-stoped' : isData == false}">
+            {{cels}} *C
+          </span>
+        </p>
+      </li>
+      <li class="item">
+        <p>
+          <span class="type">Fahrenheit </span>
+          <span class="measure"
+                [ngClass]="{'measure-stoped' : isData == false}">
+            {{fahr}} *F
+          </span>
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
